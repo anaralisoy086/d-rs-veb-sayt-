@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müəllim Ad Soyad | Peşəkar Təhsil Platforması</title>
+    <style>
+       /* Profil şəkli üslubu */
+.profile-pic {
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    width: 150px;       /* Şəklin ölçüsü */
+    height: 150px;      /* Şəklin ölçüsü (kvadrat olması üçün bərabər) */
+    object-fit: cover;  /* Şəklin təhrif olunmadan kəsilməsi */
+    border-radius: 50%; /* Şəkli tam dairəvi edir */
+    border: 5px solid white; /* Kənarlarına ağ haşiyə */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Kölgə effekti */
+    transition: transform 0.3s ease;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.05); /* Şəklin üzərinə gələndə böyüməsi */
+}
+
+        :root {
+            --primary-color: #2b6cb0;
+            --secondary-color: #2d3748;
+            --accent-color: #48bb78;
+            --bg-color: #f7fafc;
+            --text-color: #2d3748;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Yenilənmiş Şəkilli Hero Bölməsi */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .profile-pic {
+            margin-bottom: 20px;
+        }
+
+        .profile-pic img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic img:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        /* Qrup Bölmələri */
+        .main-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1a4f80;
+        }
+
+        .btn-pdf {
+            background-color: #e53e3e;
+        }
+        .btn-pdf:hover {
+            background-color: #c53030;
+        }
+
+        .btn-quiz {
+            background-color: #319795;
+        }
+        .btn-quiz:hover {
+            background-color: #234e52;
+        }
+
+        .filter-info {
+            background: #feebc8;
+            color: #c05621;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Müəllim Anar Əlisoy</div>
+            <a href="index.html" class="btn" style="margin:0; padding:8px 15px; font-size:14px;">Bütün Dərslər</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <!-- Müəllim Profil Bölməsi -->
+        <section class="hero">
+            <div class="profile-pic">
+                <img src="profil.jpeg" alt="Müəllim Şəkli">
+            </div>
+            <h1 id="welcome-title">Müəllim Anar Əlisoy</h1>
+            <p>İnformatika fənni üzrə hazırladığım xüsusi dərs qeydlərini və sınaq imtahanı PDF-lərini aşağıdan əldə edə bilərsiniz.</p>
+        </section>
+
+        <!-- Xüsusi Link Bildirişi -->
+        <div class="filter-info" id="filter-status">💡 Hazırda yalnız sizə göndərilən xüsusi dərs materialları nümayiş olunur.</div>
+
+        <!-- 1. BÖLMƏ: PDF MATERİALLARI -->
+        <section class="main-section">
+            <h2 class="section-title">📚 Mühazirələr və Dərs Konspektləri</h2>
+            <div class="grid">
+                
+                <!-- Dərs 1 PDF -->
+                <div class="card" data-lesson="1">
+                    <h3>Dərs 1: Giriş Mühazirəsi</h3>
+                    <p>Fənnin təməl prinsipləri haqqında geniş məlumat sənədi.</p>
+                    <a href="fayllar/ilkin anlayış.pdf" class="btn btn-pdf" download>📥 Mühazirəni Yüklə (PDF)</a>
+                </div>
+
+                <!-- Dərs 2 PDF -->
+                <div class="card" data-lesson="2">
+                    <h3>Dərs 2: Təkmilləşdirilmiş Mövzular</h3>
+                    <p>İkinci modula aid əsas tezislər və konspekt qeydləri.</p>
+                    <a href="./ders2.pdf" class="btn btn-pdf" download>📥 Mühazirəni Yüklə (PDF)</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. BÖLMƏ: PDF TESTLƏR -->
+        <section class="main-section">
+            <h2 class="section-title">📝 Mövzu Sınaq Testləri (PDF)</h2>
+            <div class="grid">
+                
+                <!-- Dərs 1 Test PDF -->
+                <div class="card" data-lesson="1">
+                    <h3>Dərs 1-in Test Tapşırıqları</h3>
+                    <p>1-ci mövzuya aid bilikləri yoxlamaq üçün hazırlanmış suallar.</p>
+                    <a href="fayllar/ölçü vahidləri test.pdf" class="btn btn-quiz" download>📥 Testi Yüklə (PDF)</a>
+                </div>
+
+                <!-- Dərs 2 Test PDF -->
+                <div class="card" data-lesson="2">
+                    <h3>Dərs 2-nin Test Tapşırıqları</h3>
+                    <p>2-ci mövzuya aid möhkəmləndirici suallar və tapşırıqlar.</p>
+                    <a href="./test2.pdf" class="btn btn-quiz" download>📥 Testi Yüklə (PDF)</a>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Müəllim Ad Soyad. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <script>
+        // URL-dən gələn Dərs Parametrini oxumaq və filtrləmək (Məsələn: index.html?ders=1)
+        function filterByUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lessonId = urlParams.get('ders');
+
+            if (lessonId) {
+                document.getElementById('filter-status').style.display = 'block';
+                document.getElementById('welcome-title').innerText = `Dərs ${lessonId} Materialları`;
+
+                const allCards = document.querySelectorAll('.card[data-lesson]');
+                allCards.forEach(card => {
+                    if (card.getAttribute('data-lesson') !== lessonId) {
+                        card.style.display = 'none';
+                    } else {
+                        card.style.display = 'block';
+                    }
+                });
+            }
+        }
+
+        window.onload = filterByUrl;
+    </script>
+</body>
+</html>
