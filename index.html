@@ -3,27 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Müəllim Ad Soyad | Peşəkar Təhsil Platforması</title>
+    <title>Müəllim Anar Əlisoy | Peşəkar Təhsil Platforması</title>
     <style>
-       /* Profil şəkli üslubu */
-.profile-pic {
-    margin-bottom: 20px;
-}
-
-.profile-pic img {
-    width: 150px;       /* Şəklin ölçüsü */
-    height: 150px;      /* Şəklin ölçüsü (kvadrat olması üçün bərabər) */
-    object-fit: cover;  /* Şəklin təhrif olunmadan kəsilməsi */
-    border-radius: 50%; /* Şəkli tam dairəvi edir */
-    border: 5px solid white; /* Kənarlarına ağ haşiyə */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Kölgə effekti */
-    transition: transform 0.3s ease;
-}
-
-.profile-pic img:hover {
-    transform: scale(1.05); /* Şəklin üzərinə gələndə böyüməsi */
-}
-
         :root {
             --primary-color: #2b6cb0;
             --secondary-color: #2d3748;
@@ -74,7 +55,7 @@
             padding: 0 20px;
         }
 
-        /* Yenilənmiş Şəkilli Hero Bölməsi */
+        /* Hero / Profil Bölməsi */
         .hero {
             text-align: center;
             padding: 40px 20px;
@@ -210,7 +191,7 @@
                 <img src="./fayllar/profil.jpeg" alt="Müəllim Şəkli">
             </div>
             <h1 id="welcome-title">Müəllim Anar Əlisoy</h1>
-            <p>İnformatika fənni üzrə hazırladığım xüsusi dərs qeydlərini və sınaq imtahanı PDF-lərini aşağıdan əldə edə bilərsiniz.</p>
+            <p>İnformatika fənni üzrə hazırladığım xüsusi dərs qeydlərini və sınaq imtahanı PDF-lərini aşağıdan baxıb oxuya bilərsiniz.</p>
         </section>
 
         <!-- Xüsusi Link Bildirişi -->
@@ -225,14 +206,14 @@
                 <div class="card" data-lesson="1">
                     <h3>Dərs 1: Giriş Mühazirəsi</h3>
                     <p>Fənnin təməl prinsipləri haqqında geniş məlumat sənədi.</p>
-                    <a href="fayllar/ilkin anlayış.pdf" class="btn btn-pdf" download>📥 Mühazirəni Yüklə (PDF)</a>
+                    <a href="fayllar/ilkin anlayış.pdf" class="btn btn-pdf" target="_blank">📄 Mühazirəyə Bax (PDF)</a>
                 </div>
 
                 <!-- Dərs 2 PDF -->
                 <div class="card" data-lesson="2">
                     <h3>Dərs 2: Təkmilləşdirilmiş Mövzular</h3>
                     <p>İkinci modula aid əsas tezislər və konspekt qeydləri.</p>
-                    <a href="./ders2.pdf" class="btn btn-pdf" download>📥 Mühazirəni Yüklə (PDF)</a>
+                    <a href="fayllar/ders2.pdf" class="btn btn-pdf" target="_blank">📄 Mühazirəyə Bax (PDF)</a>
                 </div>
 
             </div>
@@ -243,33 +224,34 @@
             <h2 class="section-title">📝 Mövzu Sınaq Testləri (PDF)</h2>
             <div class="grid">
                 
-                <!-- Dərs 1 Test PDF -->
+                <!-- Dərs 1 Test PDF 1 -->
                 <div class="card" data-lesson="1">
-                    <h3>Dərs 1-in Test Tapşırıqları</h3>
+                    <h3>Dərs 1-in Test Tapşırıqları 1</h3>
                     <p>1-ci mövzuya aid bilikləri yoxlamaq üçün hazırlanmış suallar.</p>
-                    <a href="fayllar/ölçü vahidləri test.pdf" class="btn btn-quiz" download>📥 Testi Yüklə (PDF)</a>
+                    <a href="fayllar/ölçü vahidləri test.pdf" class="btn btn-quiz" target="_blank">📄 Testə Bax (PDF)</a>
                 </div>
 
-                <!-- Dərs 1 Test PDF -->
+                <!-- Dərs 1 Test PDF 2 -->
                 <div class="card" data-lesson="1">
-                    <h3>Dərs 1-in Test Tapşırıqları</h3>
-                    <p>1-ci mövzuya aid möhkəmləndirici suallar və tapşırıqlar.</p>
-                    <a href="fayllar/Ilkin Anlayşlar və ölçü vahidləri.pdf" class="btn btn-quiz" download>📥 Testi Yüklə (PDF)</a>
+                    <h3>Dərs 1-in Test Tapşırıqları 2</h3>
+                    <p>1-ci mövzuya aid əlavə möhkəmləndirici test sualları.</p>
+                    <a href="fayllar/Ilkin Anlayşlar və ölçü vahidləri.pdf" class="btn btn-quiz" target="_blank">📄 Testə Bax (PDF)</a>
                 </div>
-              
+
                 <!-- Dərs 2 Test PDF -->
                 <div class="card" data-lesson="2">
                     <h3>Dərs 2-nin Test Tapşırıqları</h3>
                     <p>2-ci mövzuya aid möhkəmləndirici suallar və tapşırıqlar.</p>
-                    <a href="fayllar/yüklə.pdf" class="btn btn-quiz" download>📥 Testi Yüklə (PDF)</a>
+                    <a href="fayllar/test2.pdf" class="btn btn-quiz" target="_blank">📄 Testə Bax (PDF)</a>
                 </div>
+
             </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Müəllim Ad Soyad. Bütün hüquqlar qorunur.</p>
+        <p>&copy; 2026 Müəllim Anar Əlisoy. Bütün hüquqlar qorunur.</p>
     </footer>
 
     <script>
